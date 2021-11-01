@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://ostensible.info/main.css">
+      
+        <link rel="icon" href="https://www.getzola.org/favicon.ico">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title> Docs | Internal links &amp; deep linking </title> 
+    </head>
+    <body>
+
+      
+    <script>
+         fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            let release_name = data.name;
+            let html_url = data.html_url;
+            release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+          });
+    </script>
+      
+    <main>
+
+      
+
+        <nav>
+          
+            <a href="https:&#x2F;&#x2F;ostensible.info">
+            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="" />
+                </a>
+            
+            
+          
+
+          
+            <div id="release"></div>
+          
+  
+  <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+    <div id="trees">
+               
+            
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="getting-started" 
+         />
+        <label class="tree-toggle-label" for="getting-started">Getting Started</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://ostensible.info/getting-started/overview/">Overview</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/getting-started/installation/">Installation</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/getting-started/cli-usage/">CLI usage</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/getting-started/directory-structure/">Directory structure</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/getting-started/configuration/">Configuration</a>
+                                </li>
+
+                            
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="content" 
+        checked />
+        <label class="tree-toggle-label" for="content">Content</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://ostensible.info/content/overview/">Overview</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/section/">Section</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/page/">Page</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/shortcodes/">Shortcodes</a>
+                                </li>
+
+                            
+    
+                                <li class="active">
+                                    <a href="https://ostensible.info/content/linking/">Internal links &amp; deep linking</a>
+                                </li>
+
+                             
+                                
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+
+  
+
+                        
+    
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/table-of-contents/">Table of Contents</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/syntax-highlighting/">Syntax Highlighting</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/taxonomies/">Taxonomies</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/search/">Search</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/sass/">Sass</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/content/multilingual/">Multilingual sites</a>
+                                </li>
+
+                            
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="templates" 
+         />
+        <label class="tree-toggle-label" for="templates">Templates</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://ostensible.info/templates/overview/">Overview</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/pages-sections/">Sections and Pages</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/pagination/">Pagination</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/taxonomies/">Taxonomies</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/feeds/">Feeds</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/sitemap/">Sitemap</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/robots/">Robots.txt</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/404/">404 error page</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/templates/archive/">Archive</a>
+                                </li>
+
+                            
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="themes" 
+         />
+        <label class="tree-toggle-label" for="themes">Themes</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://ostensible.info/themes/overview/">Overview</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/themes/creating-a-theme/">Creating a theme</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/themes/extending-a-theme/">Extending a theme</a>
+                                </li>
+
+                            
+    
+    </ul>         
+    
+                 
+            
+ 
+        <input class="tree-toggle" type="checkbox" id="deployment" 
+         />
+        <label class="tree-toggle-label" for="deployment">Deployment</label>
+                        
+        <ul class="subtree">
+                
+                                <li >
+                                    <a href="https://ostensible.info/deployment/overview/">Overview</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/deployment/netlify/">Netlify</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/deployment/github-pages/">GitHub Pages</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/deployment/gitlab-pages/">GitLab Pages</a>
+                                </li>
+
+                            
+    
+                                <li >
+                                    <a href="https://ostensible.info/deployment/vercel/">Vercel</a>
+                                </li>
+
+                            
+    
+    </ul>         
+    
+    </div>    
+  </nav>
+    
+
+<article>
+ 
+  
+  <div id="on_right">
+    <span id="search-ico" class="ms-Icon--Search"></span>
+  </div>
+    <div class="search-container">
+          <input id="search" type="search" placeholder="Search as you type...">
+            <div class="search-results">
+              <div class="search-results__header"></div>
+                <ul class="search-results__items"></ul>
+              </div>
+    </div>
+         
+
+  <div id="wrap">
+    
+        <h2 id="heading-id-and-anchor-insertion">Heading id and anchor insertion&nbsp;<a class="anchor" href="#heading-id-and-anchor-insertion">&#xE732;</a></h2>
+<p>While rendering the Markdown content, a unique id will automatically be assigned to each heading. 
+This id is created by converting the heading text to a <a href="https://en.wikipedia.org/wiki/Semantic_URL#Slug">slug</a> if <code>slugify.anchors</code> is set to <code>&quot;on&quot;</code> (the default).
+If <code>slugify.paths</code> is set to <code>&quot;safe&quot;</code>, whitespaces are replaced by <code>_</code> and the following characters are stripped: <code>#</code>, <code>%</code>, <code>&lt;</code>, <code>&gt;</code>, <code>[</code>, <code>]</code>, <code>(</code>, <code>)</code>, `, <code>^</code>, <code>{</code>, <code>|</code>, <code>}</code>.
+If <code>slugify.paths</code> is set to <code>&quot;off&quot;</code>, no modifications are made, and you may be left with nominally illegal ids.
+A number is appended at the end if the slug already exists for that article 
+For example:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span style="color:#8fa1b3;"># Something exciting! &lt;- something-exciting
+</span><span style="color:#8fa1b3;">## Example code &lt;- example-code
+</span><span>
+</span><span style="color:#8fa1b3;"># Something else &lt;- something-else
+</span><span style="color:#8fa1b3;">## Example code &lt;- example-code-1
+</span></code></pre>
+<p>You can also manually specify an id with a <code>{#…}</code> suffix on the heading line:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span style="color:#8fa1b3;"># Something manual! {#manual}
+</span></code></pre>
+<p>This is useful for making deep links robust, either proactively (so that you can later change the text of a heading
+without breaking links to it) or retroactively (keeping the slug of the old header text when changing the text). It
+can also be useful for migration of existing sites with different header id schemes, so that you can keep deep
+links working.</p>
+<h2 id="anchor-insertion">Anchor insertion&nbsp;<a class="anchor" href="#anchor-insertion">&#xE732;</a></h2>
+<p>It is possible to have Zola automatically insert anchor links next to the heading, as you can see on this documentation
+if you hover a title.</p>
+<p>This option is set at the section level: the <code>insert_anchor_links</code> variable on the
+<a href="https://ostensible.info/content/section/#front-matter">section front matter page</a>.</p>
+<p>The default template is very basic and will need CSS tweaks in your project to look decent.
+If you want to change the anchor template, it can be easily overwritten by
+creating an <code>anchor-link.html</code> file in the <code>templates</code> directory.</p>
+<p>The anchor link template has the following variables:</p>
+<ul>
+<li><code>id</code>: the heading's id after applying the rules defined by <code>slugify.anchors</code></li>
+<li><code>level</code>: the heading level (between 1 and 6)</li>
+</ul>
+<h2 id="internal-links">Internal links&nbsp;<a class="anchor" href="#internal-links">&#xE732;</a></h2>
+<p>Linking to other pages and their headings is so common that Zola adds a
+special syntax to Markdown links to handle them: start the link with <code>@/</code> and point to the <code>.md</code> file you want
+to link to. The path to the file starts from the <code>content</code> directory.</p>
+<p>For example, linking to a file located at <code>content/pages/about.md</code> would be <code>[my link](@/pages/about.md)</code>.
+You can still link to an anchor directly; <code>[my link](@/pages/about.md#example)</code> will work as expected.</p>
+
+    
+  </div>
+
+</article>
+</main>
+
+  
+  <script type="text/javascript" src="https://ostensible.info/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://ostensible.info/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://ostensible.info/js.js" defer></script>
+  
+
+</body>
+</html>
