@@ -27,7 +27,7 @@ Once IKE SA is established, the peers are ready to establish information about w
 
 Once quick mode is performed and IPsec SA exists and traffic is able to flow in a secured way.
 So lets expand a bit on ESP and AH. 
-![[Pasted image 20211027103305.png]]
+![[https://raw.githubusercontent.com/KentoHardRok/obsidian-notes/main/Pasted%20image%2020211027103305.png?token=ADLRAVIB4W7MVYUHU5YBIXDBQAVX4]]
 This images paints a pretty good literal picture of the differences between the two. The description can better highlight why its beneficial to use both.
 AH is responsible for data integrity, AKA the data hasnt been messed with in transit. ESP is responsible for data encrypion, or that no one can eavesdrop on the data as its in transit.
 

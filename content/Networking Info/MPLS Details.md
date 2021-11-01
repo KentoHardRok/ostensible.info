@@ -16,7 +16,7 @@ So lets take a step back, MPLS stands for Multi-protocol Label Switching and it 
 
 MPLS is the means of relying on those labels for forwarding decsisions. These labels actually reside betweem the layer 2 header and the IP packet. 
 
-![[Pasted image 20211028144911.png]]
+![[https://github.com/KentoHardRok/obsidian-notes/blob/main/Pasted%20image%2020211028144911.png?raw=true]]
 
 From this graph we see that the layer 2 header is still the outer header which means it still uses layer two as its forwarding mechanism. The MPLS header is just additional information that can be acted on once a device discards L2 header. This then leads to the main functions of MPLS when it comes to the label. PUSH, POP, and SWAP. 
 
