@@ -1,5 +1,5 @@
 +++
 title = "AWS"
-weight = 2
+weight = 1
 sort_by = "weight"
 +++

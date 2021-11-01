@@ -1,6 +1,6 @@
 +++
 title = "Week 1"
-weight = 21
+weight = 11
 +++
 
 #coursera/AWScloudessentials/regions
