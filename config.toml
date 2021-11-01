@@ -8,6 +8,6 @@ highlight_code = true
 highlight_theme = "base16-ocean-light"
 
 [extra]
-logo = "https://easydocs.codeandmedia.com/logo.svg"
+logo = "https://i.ibb.co/r4B2211/ostensible-info.png"
 release = "https://api.github.com/repos/getzola/zola/releases/latest"
-favicon = "https://www.getzola.org/favicon.ico"
+favicon = "https://i.ibb.co/r4B2211/ostensible-info.png"
