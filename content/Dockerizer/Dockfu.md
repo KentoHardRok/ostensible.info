@@ -8,24 +8,26 @@ weight = 15
 # Dockerfile setup
 The dockerfile is the file used to standup/build an image to be used in docker or podman or whatever compatible container environment. There are a few steps that are necessary and some that are optional. 
 
-`FROM alpine:latest`
-`RUN apk update && \`
-    `apk upgrade && \ `
-    `apk add \`
-        `wireguard-tools \`
-`        iptables \`
-`        bash`
-`ENV WG_PORT=51820`
-`ENV NUM_CLIENTS=5`
-`ENV PRIV_NET=10.0.0.`
-`ENV EXT_IP=172.16.0.10`
-`WORKDIR /etc/wireguard`
-`COPY wg0.conf wgpeer.conf peer_setup.conf ./`
-`COPY createwg /usr/local/bin/`
-`RUN chmod +x /usr/local/bin/createwg && \`
-`    mkdir client`
-`ENTRYPOINT ["createwg"] `
-`CMD ["wg-quick","up","wg0"]`
+```dockerfile
+FROM alpine:latest
+RUN apk update && \
+    apk upgrade && \ 
+    apk add \
+        wireguard-tools \
+        iptables \
+        bash
+ENV WG_PORT=51820
+ENV NUM_CLIENTS=5
+ENV PRIV_NET=10.0.0.
+ENV EXT_IP=172.16.0.10
+WORKDIR /etc/wireguard
+COPY wg0.conf wgpeer.conf peer_setup.conf ./
+COPY createwg /usr/local/bin/
+RUN chmod +x /usr/local/bin/createwg && \
+    mkdir client
+ENTRYPOINT ["createwg"] 
+CMD ["wg-quick","up","wg0"]
+```
 
 This isnt the most perfect dockerfile but it is mine and I can walk through it pretty easily. From the top we have the `FROM` command, this sets the base image. Its not a good idea to use the latest tag for the version because it could update and break things.
 
