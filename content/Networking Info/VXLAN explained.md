@@ -1,6 +1,6 @@
 +++
 title = "VXLAN explained"
-weight = 15
+weight = 35
 +++
 
 #vxlan #encapsulation

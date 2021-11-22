@@ -1,6 +1,6 @@
 +++
-title = "Basic IOS Hardening"
-weight = 39
+title = "Harden IOS, pretty much"
+weight = 36
 +++
 
 # Run down the file
