@@ -1,6 +1,6 @@
 +++
-title = "Wireguard Setup"
-weight = 61
+title = "Wireguards"
+weight = 41
 +++
 
 #wireguard, #vpn, #setup
