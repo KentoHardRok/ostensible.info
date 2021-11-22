@@ -6,7 +6,7 @@ weight = 31
 #vpn/layer3/ipsec #cisco/asa 
 # IPSec config examples
 
-So there are 2 main phases to an IPSec. There is the initial key exchange which is necesary to establish credentials to the second phase which is the enctypting of traffic. For the first phase the here is an example config that I'll follow up with an explanation.
+So there are 2 main phases to an IPSec. There is the initial key exchange which is necessary to establish credentials to the second phase which is the enctypting of traffic. For the first phase the here is an example config that I'll follow up with an explanation.
 
 ```cisco
 crypto ipsec ikev2 ipsec-proposal sec-prop
@@ -46,7 +46,7 @@ crypto ikev2 policy 1
   lifetime seconds 36500
 ```
   
-Here is the significant part of the IPSec phase 2 condfiguration which labels the aspects of the ipsec tunnel. Here we still have the ecryption standard used, integrirty hash, DH group selected, PRF or the pseudo random function is whats used to create keying material. Then finally the the lifetime of each key.
+Here is the significant part of the IPSec phase 2 configuration which labels the aspects of the ipsec tunnel. Here we still have the encryption standard used, integrity hash, DH group selected, PRF or the pseudo random function is whats used to create keying material. Then finally the the lifetime of each key.
 
 ```cisco
 crypto ikev2 enable outside
@@ -72,12 +72,14 @@ tunnel-group 192.168.100.2 type ipsec-l2l
 
 this is an example of the tunnel group type. Although this is a l2l type there are other options. 
   
+  
   | Types         |                                                |
   | ------------- | ---------------------------------------------- |
   | ipsec-l2l     | l2l configurations                             |
   | ipsec-ra      | The old IPSec client vpn type (deprecated)     |
   | remote-access | The new client vpn type for both SSL and IPSec |
   | webvpn        | The old SSL client vpn type (deprecated)       |
+
  
  | Attribute Sets     |                                                                        |
  | ------------------ | ---------------------------------------------------------------------- |
@@ -85,6 +87,7 @@ this is an example of the tunnel group type. Although this is a l2l type there a
  | ipsec-attributes   | specific IPSec attributes used for l2l and client IPSec configurations |
  | ppp-attributes     | specific ppp attributes                                                |
  | webvpn-attributes  | specific ssl attributes used for webvpn configurations                 |
+
 
 Here we can see some of the configuration options and the pairs of tunnel group types with the attributes.  
 

@@ -14,9 +14,9 @@ weight = 11
 	3. **pricing**
 		1. some regions are more expensive than others, so be aware of that
 	4. **service availability**
-		1. Not all services are available everywhere so be concious to verify what services you require.
-2. The first real bit of information this week discusses is the physical layout of their infrastructure. A data center exists inside of a zone, a zone is a group of redundant data centers. A region is a group of redundant zones. Each zone is labled by the physical area the inhabit... more or less.
-3. AWS regions are independant of eachother. So your data doesnt leave a region without your explicit consent.
+		1. Not all services are available everywhere so be conscious to verify what services you require.
+2. The first real bit of information this week discusses is the physical layout of their infrastructure. A data center exists inside of a zone, a zone is a group of redundant data centers. A region is a group of redundant zones. Each zone is labeled by the physical area the inhabit... more or less.
+3. AWS regions are independent of each other. So your data doesn't leave a region without your explicit consent.
 4. Services within AWS are deployed either within an AZ, a region or globally so look it ip.
 
 
