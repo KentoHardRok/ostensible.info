@@ -1,4 +1,7 @@
-
++++
+title = "Basic IOS Hardening"
+weight = 39
++++
 
 # Run down the file
 First off I'm running down the Cisco suggested hardening guide and as I go through this I'll make not of the changes that need to occur as well as the steps necessary to get there.
