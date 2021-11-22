@@ -13,7 +13,7 @@ Logging best practices dictate logging to a central service. to do that:
 logging-plane host
 	management-interface
 ```
-You also have configuration options to log to ATA flash that is peristent on reboot which is definitely useful but not the better options. To be fair you can also use this in conjunction with a central logging server.
+You also have configuration options to log to ATA flash that is persistent on reboot which is definitely useful but not the better options. To be fair you can also use this in conjunction with a central logging server.
 Now for some logging things to avoid. No logging to console or monitor
 ```cisco
 no logging console  
@@ -23,7 +23,7 @@ As an alternative to logging to either console or monitor its suggested, if you 
 ```cisco
 logging buffered 16384 6
 ```
-When logging its also importnant to controll what interfaces are sending logs and be sure to monitor that traffic. To that end set the logging source manually, preferably to the loopback interface which you should be using for management traffic.
+When logging its also important to control what interfaces are sending logs and be sure to monitor that traffic. To that end set the logging source manually, preferably to the loopback interface which you should be using for management traffic.
 ```cisco
 logging source-interface Loopback 0
 ```
@@ -59,7 +59,7 @@ ip http secure-server
 ```
 
 ### Gain Traffic Visibility with netflow
-Originially intended to export traffic to a management application, it can be used to monitor traffic real time.
+Originally intended to export traffic to a management application, it can be used to monitor traffic real time.
 
 ### Configuration Management
 So Cisco IOS has built into it a feature to locally hold backup configurations so that you can roll back when necessary. This is different than simply copying a configuration file as the rollback completely replaces the running configuration as opposed to adding on the additional commands. 
@@ -91,7 +91,7 @@ archive
 ```
 
 ### Management Plane 
-Functions that achieve the managemnt goals of the network.
+Functions that achieve the management goals of the network.
 
 ### Password Management
 Required Commands:
@@ -101,22 +101,22 @@ service password-encryption
 ```
 
 ### Enhanced Password Security 
-This feature was introduced in Cisco IOS 12.2(8) and it allows the passwords to be conigured with MD5 hashing, The requied commands are:
+This feature was introduced in Cisco IOS 12.2(8) and it allows the passwords to be configured with MD5 hashing, The required commands are:
 ```cisco
 username <name> secret <password>
 ```
 
 ### Login Password Retry Lockout 
-This allows you to lock out a local user account after a configured number of unsuccesful login attempts. Once locked out, their account is locked until you unlock it. An authorized user with privelege level 15 cannot be locked out with this feature. Keep priv 15 users to a minimum. The required commands are:
+This allows you to lock out a local user account after a configured number of unsuccessful login attempts. Once locked out, their account is locked until you unlock it. An authorized user with privilege level 15 cannot be locked out with this feature. Keep priv 15 users to a minimum. The required commands are:
 ```cisco
 aaa new-model  
 aaa local authentication attempts max-fail <max-attempts>
 aaa authentication login default local
 ```
-#### Important to estalished admin priv level with some limitations below 15
+#### Important to established admin priv level with some limitations below 15
 
 ### No Service Password-Recovery
-This does not allow anyone with console acess to insecurely access the device config and clear the password. It also does not allow malicious users to change the config registry value and access NVRAM. Required Commands are:
+This does not allow anyone with console access to insecurely access the device config and clear the password. It also does not allow malicious users to change the config registry value and access NVRAM. Required Commands are:
 ```cisco
 no service password-recovery
 ```
@@ -128,8 +128,8 @@ Turn off unused services... The TCP and UDP small services must be disabled. The
 * discard (port number 9)
 * daytime (port number 13)
 * chargen (port number 19)	
-Fortunately these are turned off by default but instead there are a few other features that can be turned off. Rememeber that these are only suggestions on alternative services that are enabled and should be disabled only if they are not needed.
-* `no ip finger` global configuration command in order to diable finger service
+Fortunately these are turned off by default but instead there are a few other features that can be turned off. Remember that these are only suggestions on alternative services that are enabled and should be disabled only if they are not needed.
+* `no ip finger` global configuration command in order to disable finger service
 * `no ip bootp server` global config, disable bootstrap protocol (BOOTP)
 * `ip dhcp bootp ignore` global config, to disable BOOTP although this leaves DHCP serves enables
 * `no service dhcp` global config, to disable DHC relay services if they are not needed.
@@ -138,8 +138,8 @@ Fortunately these are turned off by default but instead there are a few other fe
 * `no service pad` global config, to disable Packet Assembler/Disassembler (PAD), used for x.25 networks
 * `no ip http server | no ip http secure-server` global config, to disable http ad https servers respectively.
 * `no service config` global config, unless the device pulls its config from the network during startup, this command *MUST* be used. This prevents the IOS device from an attempt to locate a configuration file on the network.
-* `no cdp enable` interface config, CDP must be diabled on all interfaces touching untrusted networks. `no cdp run` global config, can also be used to disable cdp globally. 
-* `no lldp transmit & no lldp receive` interface config, this is the same threat and rationale as cdp usage. also `no lldp run` isused to disable it globally if not used at all.
+* `no cdp enable` interface config, CDP must be disabled on all interfaces touching untrusted networks. `no cdp run` global config, can also be used to disable cdp globally. 
+* `no lldp transmit & no lldp receive` interface config, this is the same threat and rationale as cdp usage. also `no lldp run` issued to disable it globally if not used at all.
 
 ### EXEC Timeout
 this is used to set the interval the exec command waits for user input before it terminates the session. 
@@ -172,7 +172,7 @@ memory free low-watermark processor <threshold>
 memory free low-watermark io <threshold> 
 ```
 Memory Threshold Notification generates a log message in order to indicate that free memory on a device has fallen lower than the configured threshold. 
-There is also a command used to be sure there is sufficient memory for delieverying critical notifications. 
+There is also a command used to be sure there is sufficient memory for delivering critical notifications. 
 ```cisco
 memory reserve critical <value>
 ```
@@ -189,20 +189,20 @@ process cpu threshold type <type> rising <percentage> interval <seconds>
 process cpu statistics limit entry-percentage <number> [size <seconds>]  
 ```
 
-### Reserve memory for Consol Access
+### Reserve memory for Console Access
 This reserves memory to assure you can access device via console in case of an emergency.
 ```cisco
 memory reserve console 4096
 ```
 
-### Enhanced Crashinfo File Collection
+### Enhanced Crash info File Collection
 reclaims memory for crash info
 ```cisco
 exception crashinfo maximum files <number-of-files>
 ```
 
 ### Network Time Protocol
-Although not enherintly dangerous, it needs to be secured. Its important for IPSec as well as logging. All devices should agree on time information otherwise its difficult to correlate events with eachother. Suggested to use NTP authenti  here's how. 
+Although not inherently dangerous, it needs to be secured. Its important for IPSec as well as logging. All devices should agree on time information otherwise its difficult to correlate events with each other. Suggested to use NTP authenticate here's how. 
 Client:
 ```cisco
 (config)#**ntp authenticate**  
@@ -220,7 +220,7 @@ Server:
 #### Here I will just remind you that ACLs exist and you should use them. There are examples of things to filter but ultimately this is something you have to decide on in your environment. 
 
 ### Aux Port access
-line AUX has a lot of privleges that make it dangeous and it should be secured in most cases, and by secured I mean disabled. This is of course you dont intend to use it for things like password recovery. Here is how you do that:
+line AUX has a lot of privileges that make it dangerous and it should be secured in most cases, and by secured I mean disabled. This is of course you dont intend to use it for things like password recovery. Here is how you do that:
 ```cisco
 line aux 0  
  transport input none  
@@ -231,7 +231,7 @@ line aux 0
 ```
 
 ### Use TACACS+
-Just use it already, it can be free. There are tutorials, use it for user/admin authentication on your network devices. Radius is also an option but it only encryps the password where as TACACS+ encrypts the whole TCP payload. Here are the commands needed to enable TACACS+ on a cisco device:
+Just use it already, it can be free. There are tutorials, use it for user/admin authentication on your network devices. Radius is also an option but it only encrypts the password where as TACACS+ encrypts the whole TCP payload. Here are the commands needed to enable TACACS+ on a cisco device:
 ```cisco
 aaa new-model  
 aaa authentication login default group tacacs+ enable
@@ -299,7 +299,7 @@ dont do it
 ```cisco
 no ip proxy-arp
 ```
-This is an interface problem but i think that it can be done in both global and interface level. 
+This is an interface problem but I think that it can be done in both global and interface level. 
 
 ## Etcetera
 So at this point this is all of the general OS hardening, There is a lot more than can and should be done with access lists but that really is something that should be tailored to your environment. The idea there is that you allow only what you need and block everything else. To be fair it does get much more complex than that.
