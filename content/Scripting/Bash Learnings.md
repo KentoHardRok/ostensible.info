@@ -1,6 +1,6 @@
 +++
 title = "Bashing"
-weight = 51
+weight = 71
 +++
 
 #scripting/bash #scripting/sh 

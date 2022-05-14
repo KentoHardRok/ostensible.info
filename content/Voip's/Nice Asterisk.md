@@ -1,6 +1,6 @@
 +++
 title = "Nice Asterisk"
-weight = 61
+weight = 81
 +++
 
 #voip/asterisk

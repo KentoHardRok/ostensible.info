@@ -1,6 +1,6 @@
 +++
 title = "Cisco IPSec Configs"
-weight = 311
+weight = 41
 +++
 
 #vpn/layer3/ipsec #cisco/asa 

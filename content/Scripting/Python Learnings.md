@@ -1,6 +1,6 @@
 +++
 title = "Python learning"
-weight = 52
+weight = 72
 +++
 
 

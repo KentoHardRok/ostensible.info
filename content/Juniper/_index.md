@@ -1,5 +1,5 @@
 +++
 title = "Juniper"
-weight = 32
+weight = 5
 sort_by = "weight"
 +++
